@@ -17,7 +17,7 @@ spec:
     spec: 
       containers: 
         - name: nginx-container 
-          image: mayurpandit25/studentapp-frontend:latest
+          image: nginx:latest
           ports: 
             - name: nginxport
               containerPort: 80
