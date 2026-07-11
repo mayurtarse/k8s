@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+Kind: DaemonSet
+ metadata:
+  name: DaemonSet
+  Labels:
+   app: myapp
+ spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata: 
+      name: rs-template
+      labels:
+        app: myapp
+    container:
+       -name: rs-container
+       labels:
+       app: myapp
+       image:
+         -name: Daemonimage
+         image: amazon/cloudwatch-agent
+       ports:
+         -name: Daemonport
+          Daemonport: 80
+
+
+         
+
+       
